@@ -1,7 +1,7 @@
 import React from 'react';
-import ArtkiveCoupons from '/Users/katiebrown/portfolio-site/src/assets/artkive-coupons 1.png';
-import HelperBeesLogo from '/Users/katiebrown/portfolio-site/src/assets/helperbees_logo_trimmed 1.png';
-import Euzn0oH8 from '/Users/katiebrown/portfolio-site/src/assets/euzn0oH8_400x400 2.png';
+import ArtkiveCoupons from '../assets/artkive-coupons.png';
+import HelperBeesLogo from '../assets/helperbees_logo_trimmed.png';
+import Euzn0oH8 from '../assets/euzn0oH8_400x400.png';
 
 const AustinJobs = () => {
   return (
