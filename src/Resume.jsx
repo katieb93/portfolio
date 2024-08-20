@@ -56,7 +56,7 @@ const ResumeComponent = () => {
               minWidth: '150px',      // Optional: Set a minimum width if needed
             }}
           >
-            View/Download Resume (PDF)
+            Download Resume (PDF)
           </Button>
         </Box>
         <section>
