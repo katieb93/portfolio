@@ -4,9 +4,9 @@ import React from 'react';
 // import AmazonStudiosLogo from '/Users/katiebrown/portfolio-site/src/assets/Amazon_Studios_logo.svg 1.png';
 // import UniversalLogo from '/Users/katiebrown/portfolio-site/src/assets/Universal_Content_Productions.svg 1.png';
 import Val1 from '../assets/val_1.png';
-import SkyboundLogo from '../assets/Skybound_Entertainment_Logo_1.png';
-import AmazonStudiosLogo from '../assets/Amazon_Studios_logo_1.png';
-import UniversalLogo from '../assets/Universal_Content_Productions_1.png';
+import SkyboundLogo from '../assets/Skybound_Entertainment_Logo.png';
+import AmazonStudiosLogo from '../assets/Amazon_Studios_logo.png';
+import UniversalLogo from '../assets/Universal_Content_Productions.png';
 
 const LAJobs = () => {
   return (
