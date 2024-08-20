@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';  // Assuming the theme file is named 'theme.js'
-import image from '/Users/katiebrown/portfolio-site/src/assets/NovelList.png';  // Import the single image
+import image from '..assets/NovelList.png';  // Import the single image
 
 export default function SingleImageDisplay() {
   return (
