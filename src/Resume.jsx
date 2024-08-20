@@ -4,7 +4,7 @@ import theme from './theme'; // Assuming the theme file is named theme.js and is
 
 const ResumeComponent = () => {
   const handleDownload = () => {
-    const pdfUrl = '/assets/Tech.KB.Resume.2024.pdf';
+    const pdfUrl = 'https://raw.githubusercontent.com/katieb93/portfolio/main/src/assets/Tech.KB.Resume.2024.pdf';
     window.open(pdfUrl, '_blank');
   };
 
