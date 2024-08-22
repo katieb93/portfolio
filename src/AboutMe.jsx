@@ -1,33 +1,50 @@
+// import React from 'react';
+// import { ThemeProvider, Box, Typography } from '@mui/material';
+// import theme from './theme'; // Assuming the theme file is named theme.js and is in the same directory
+
+// const AboutMe = () => {
 import React from 'react';
 import { ThemeProvider, Box, Typography } from '@mui/material';
 import theme from './theme'; // Assuming the theme file is named theme.js and is in the same directory
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const AboutMe = () => {
+
+  const isMobile = useMediaQuery('(max-width:600px)'); // Define the mobile breakpoint
+
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ padding: '100px 200px 50px 200px', backgroundColor: theme.palette.background.default }}>
+      <Box 
+        sx={{ 
+          padding: isMobile ? '30% 10%' : '150px 200px 50px 200px', // Adjust padding for mobile
+          backgroundColor: theme.palette.background.default 
+        }}
+      >
 
-        <Typography variant="h1" component="h1" sx={{ ...theme.typography.wsParadoseItalic, textTransform: 'uppercase', marginBottom: '20px' }}>
+        <Typography 
+          // variant={isMobile ? "h4" : "h1"} // Adjust variant for mobile
+          // component="h1" 
+          sx={{ 
+            ...theme.typography.wsParadoseItalic, 
+            textTransform: 'uppercase', 
+            marginBottom: isMobile ? '10%' : '5%', // Adjust margin for mobile
+            fontSize: isMobile ? '3.5rem' : '6rem' // Adjust font size for mobile
+          }}
+        >
           About Me
         </Typography>
 
-        <Typography variant="body3" sx={{ marginBottom: '20px',  }}>
+        <Typography variant="body3" sx={{ marginBottom: '20px', }}>
           Hello! I'm Katie, a software engineer with a passion for storytelling, creativity, and innovation.
         </Typography>
 
         <Typography variant="h3" component="h3" sx={{ marginBottom: '10px', color: '#415170' }}>
           My Journey
         </Typography>
-
-        {/* <Typography variant="body3" sx={{ marginBottom: '20px', }}>
-          I graduated in 2024 from the University of Texas at Austin with a B.S. in Radio-Television-Film and a certificate in creative writing. My love for storytelling led me to write several novels and screenplays, even winning an award with Austin's chapter of SCBWI.
-
-          After my undergrad, I moved to Los Angeles to pursue an MFA in Writing and Producing for Television from Loyola Marymount University. There, I honed my skills in film and television development, produced a short film, and immersed myself in writing. I also taught myself Adobe's entire suite of tools, diving deep into editing and music curation.
-        </Typography> */}
+        
         <Typography variant="body3" sx={{ marginBottom: '20px' }}>
         I graduated in 2024 from the University of Texas at Austin with a B.S. in Radio-Television-Film and a certificate in creative writing. My love for storytelling led me to write several novels and screenplays, even winning an award with Austin's chapter of SCBWI. After undergrad, I moved to Los Angeles to pursue an MFA in Writing and Producing for Television from Loyola Marymount University. There, I honed my skills in film and television development, produced a short film, and immersed myself in writing. I also taught myself Adobe's entire suite of tools, diving deep into editing and music curation.
         </Typography>
-
 
         <Typography variant="h3" component="h3" sx={{ marginBottom: '10px', color: '#415170' }}>
           The Pivot to Tech

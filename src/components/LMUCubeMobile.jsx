@@ -1,13 +1,12 @@
 import React from 'react';
-import CommonCube from './CommonCube';
+import CommonCubeMobile from './CommonCubeMobile';
 import { useTheme } from '@mui/material/styles';
 
-function LMU() {
+function LMUMobile() {
   const theme = useTheme(); // Access the theme using the hook
 
   return (
-    <CommonCube 
-      width={"300"} 
+    <CommonCubeMobile 
 
       content={
         <>
@@ -18,4 +17,4 @@ function LMU() {
   );
 }
 
-export default LMU;
+export default LMUMobile;

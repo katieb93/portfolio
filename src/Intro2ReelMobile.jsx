@@ -1,18 +1,13 @@
 import React from 'react';
 import ReelDraftScreenShot from './assets/ReelDraftScreenShot.png';
-import ReelDraft from './components/RDCube';
+import ReelDraftMobile from './components/RDCubeMobile';
 
-import ClipHits from './assets/ClipHits.png'; 
-import ClipHitsCube from './components/ClipHitsCube';
-
-
-
-const Intro4 = () => {
+const Intro2ReelMobile = () => {
   return (
     <div style={{ position: 'relative', display: 'inline-block', width: '100%' }}>
       <img 
-        src={ClipHits} 
-        alt="Clip Hits" 
+        src={ReelDraftScreenShot} 
+        alt="Reel Draft" 
         style={{ 
           display: 'block', 
           width: '100%', 
@@ -21,17 +16,14 @@ const Intro4 = () => {
       />
       <div 
         style={{ 
-          position: 'absolute', 
-          top: '20%', 
-          left: '25%', 
-          transform: 'translate(-50%, -50%)', 
+          position: 'relative', 
           zIndex: 10 
         }}
       >
-        <ClipHitsCube />
+        <ReelDraftMobile />
       </div>
     </div>
   );
 };
 
-export default Intro4;
+export default Intro2ReelMobile;

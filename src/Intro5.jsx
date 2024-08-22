@@ -37,7 +37,7 @@ function Intro5() {
       </div>
       <div style={{ 
           position: 'absolute', 
-          top: '300px', // 300px down from the top of the container
+          top: '200px', // 300px down from the top of the container
           left: '50%', // Center horizontally
           transform: 'translateX(-50%)', // Adjust the left position to truly center the component
           zIndex: 7, // Higher zIndex to hover above PeterPan

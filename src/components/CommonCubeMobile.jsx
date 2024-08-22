@@ -133,14 +133,13 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-function CommonCube({ width, height, backgroundColor, borderColor, content, children }) {
+function CommonCubeMobile({ width, height, backgroundColor, borderColor, content, children }) {
   const theme = useTheme();
 
   return (
     <Box 
       sx={{ 
-        width: width || '50%', // Default width is 50% of the parent container
-        maxWidth: 300,         // Maximum width of the box
+        width: width || '100%', // Default width is 50% of the parent container
         minWidth: 250,         // Ensures a minimum width to prevent shrinking too much
         height: height || 'auto', // Height adjusts automatically based on content
         backgroundColor: backgroundColor || theme.palette.primary.main, 
@@ -149,18 +148,18 @@ function CommonCube({ width, height, backgroundColor, borderColor, content, chil
         flexDirection: 'column', 
         justifyContent: 'center',
         alignItems: 'center',
-        padding: theme.spacing(4),
+        padding: theme.spacing(3),
         boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.25)',
-        boxSizing: 'border-box', // Ensures padding is included in width/height calculations
-        '@media (max-width: 600px)': { // Adjustments for smaller screens
-          width: '80%',          // Increase the width on smaller screens
-          padding: theme.spacing(2), // Adjust padding to fit better on small screens
-        },
-        '@media (max-width: 400px)': { // Adjustments for extra small screens
-          width: '90%',          // Further increase the width
-          padding: theme.spacing(1),  // Reduce padding to save space
-          minWidth: 250,         // Ensure a minimum width on the smallest screens
-        },
+        // boxSizing: 'border-box', // Ensures padding is included in width/height calculations
+        // '@media (max-width: 600px)': { // Adjustments for smaller screens
+        //   width: '80%',          // Increase the width on smaller screens
+        //   padding: theme.spacing(2), // Adjust padding to fit better on small screens
+        // },
+        // '@media (max-width: 400px)': { // Adjustments for extra small screens
+        //   width: '90%',          // Further increase the width
+        //   padding: theme.spacing(1),  // Reduce padding to save space
+        //   minWidth: 250,         // Ensure a minimum width on the smallest screens
+        // },
       }} 
     >
       <Typography 
@@ -183,5 +182,5 @@ function CommonCube({ width, height, backgroundColor, borderColor, content, chil
   );
 }
 
-export default CommonCube;
+export default CommonCubeMobile;
 

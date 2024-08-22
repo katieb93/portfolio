@@ -1,8 +1,11 @@
 import React from 'react';
 import { ThemeProvider, Box, Typography, Button } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import theme from './theme'; // Assuming the theme file is named theme.js and is in the same directory
 
 const ResumeComponent = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   const handleDownload = () => {
     const pdfUrl = 'https://raw.githubusercontent.com/katieb93/portfolio/main/src/assets/Tech.KB.Resume.2024.pdf';
     window.open(pdfUrl, '_blank');
@@ -10,61 +13,63 @@ const ResumeComponent = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      {/* <Box sx={{ padding: '100px 200px 50px 200px', backgroundColor: theme.palette.background.default }}>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Typography variant="h1" component="h1" sx={{ ...theme.typography.wsParadoseItalic, textTransform: 'uppercase', marginBottom: '20px' }}>
-
-              Resume
-          </Typography>
-          <Button
-              onClick={handleDownload}
-              variant="contained"
-              color="primary"
-              sx={{ padding: '10px 20px', marginLeft: '50px', cursor: 'pointer', borderRadius: 0 }} // Adjust or remove marginLeft for desired spacing
-
-              // sx={{ padding: '10px 20px', marginLeft: '50px', cursor: 'pointer' }} // Adjust or remove marginLeft for desired spacing
-          >
-              View/Download Resume (PDF)
-          </Button>
-        </Box> */}
-      <Box sx={{ padding: '100px 200px 50px 200px', backgroundColor: theme.palette.background.default }}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <Box 
+        sx={{ 
+          padding: { xs: '100px 20px 20px 20px', sm: '100px 150px 50px 150px' }, // Adjust padding for mobile and desktop
+          backgroundColor: theme.palette.background.default 
+        }}
+      >
+        <Box 
+          sx={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'flex-start', 
+            textAlign: 'left' // Ensure text is left-aligned
+          }}
+        >
           <Typography
             variant="h1"
             component="h1"
-            sx={{ ...theme.typography.wsParadoseItalic, textTransform: 'uppercase'}}
+            sx={{ 
+              ...theme.typography.wsParadoseItalic, 
+              textTransform: 'uppercase',
+              // marginBottom: '20px',
+              marginBottom: { xs: '5px', sm: '5px' }, // Responsive font size
+              fontSize: { xs: '4rem', sm: '8rem' }, // Responsive font size for mobile
+              lineHeight: 1, // Set line height to 1 to minimize extra space
+
+            }}
           >
             Resume
           </Typography>
-          {/* <Button
-            onClick={handleDownload}
-            variant="contained"
-            color="primary"
-            sx={{ padding: '10px 20px', cursor: 'pointer', borderRadius: 0, marginBottom: '30px'  }} // Removed marginLeft for vertical alignment
-          >
-            View/Download Resume (PDF)
-          </Button> */}
           <Button
             onClick={handleDownload}
             variant="contained"
             color="primary"
             sx={{
-              padding: '5px 10px',   // Smaller padding
-              fontSize: '0.8rem',     // Smaller font size
+              padding: { xs: '5px 10px', sm: '10px 20px' }, // Responsive padding
+              fontSize: { xs: '0.8rem', sm: '1rem' }, // Responsive font size
               borderRadius: 0,
-              marginBottom: '30px',
-              minWidth: '150px',      // Optional: Set a minimum width if needed
+              marginBottom: { xs: '5px', sm: '20px' }, // Responsive font size
+
+              minWidth: '150px', // Set a minimum width
             }}
           >
             Download Resume (PDF)
           </Button>
         </Box>
+
         <section>
-          <Typography variant="h2" component="h2" sx={{ fontWeight: 500, marginBottom: '10px' }}>
-            Software Skills
+          <Typography variant="h2" component="h2" sx={{ marginBottom: '10px', marginTop: '20px' }}>
+            Software Skills & Languages
           </Typography>
 
-          <Typography variant="body1">
+          <Typography 
+            variant="body1" 
+            sx={{ 
+              lineHeight: isMobile ? '1rem' : '2rem', fontSize: '1rem', lineHeight: '1.5rem'  // Responsive line height for mobile and desktop
+            }}
+          >
             Coding languages | JavaScript, HTML, CSS, Python, C++, Flask, SQL, Node.js, Express, ReactJS, Redux, SQL, APIs, OSIs, POX Controller, ES6, GitHub
           </Typography>
         </section>
@@ -75,7 +80,7 @@ const ResumeComponent = () => {
           </Typography>
 
           <Box sx={{ marginBottom: '20px' }}>
-            <Typography variant="h3" component="h3" sx={{ textTransform: 'uppercase', fontSize: '1.25rem', fontWeight: 700 }}>
+            <Typography variant="h3" component="h3" sx={{ textTransform: 'uppercase', fontSize: '1.25rem', fontWeight: 700,  marginTop: '2%'}}>
               Backpack Group
             </Typography>
             <Typography variant="body1" sx={{ fontWeight: theme.typography.roboto700.fontWeight }}>
@@ -92,9 +97,7 @@ const ResumeComponent = () => {
             </ul>
           </Box>
 
-          {/* <Box sx={{ marginBottom: '20px' }}> */}
           <Box sx={{ marginBottom: '20px' }}>
-
             <Typography variant="h3" component="h3" sx={{ textTransform: 'uppercase', fontSize: '1.25rem', fontWeight: 700 }}>
               The Helper Bees
             </Typography>
@@ -132,25 +135,24 @@ const ResumeComponent = () => {
           </Typography>
 
           <Box >
-            <Typography variant="body1" sx={{ fontWeight: theme.typography.roboto500.fontWeight }}>
+            <Typography variant="body1" sx={{ fontWeight: theme.typography.roboto500.fontWeight, lineHeight: '1.2rem', marginBottom: '5px' }}>
               Springboard | Software Engineering Training | Graduated: July 2024
             </Typography>
           </Box>
 
           <Box sx={{  }}>
-            <Typography variant="body1" sx={{ fontWeight: theme.typography.roboto500.fontWeight }}>
+            <Typography variant="body1" sx={{ fontWeight: theme.typography.roboto500.fontWeight, lineHeight: '1.2rem', marginBottom: '5px' }}>
               Loyola Marymount University | MFA Writing and Producing for TV | Graduated: May 2020
             </Typography>
           </Box>
 
           <Box>
-            <Typography variant="body1" sx={{ fontWeight: theme.typography.roboto500.fontWeight }}>
+            <Typography variant="body1" sx={{ fontWeight: theme.typography.roboto500.fontWeight, lineHeight: '1.2rem', marginBottom: '5px' }}>
               The University of Texas at Austin | BS Radio-Television-Film, Creative Writing | Graduated: June 2016
             </Typography>
           </Box>
+          
         </section>
-
-
       </Box>
     </ThemeProvider>
   );
