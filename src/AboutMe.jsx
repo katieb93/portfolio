@@ -43,7 +43,7 @@ const AboutMe = () => {
         </Typography>
         
         <Typography variant="body3" sx={{ marginBottom: '20px' }}>
-        I graduated in 2024 from the University of Texas at Austin with a B.S. in Radio-Television-Film and a certificate in creative writing. My love for storytelling led me to write several novels and screenplays, even winning an award with Austin's chapter of SCBWI. After undergrad, I moved to Los Angeles to pursue an MFA in Writing and Producing for Television from Loyola Marymount University. There, I honed my skills in film and television development, produced a short film, and immersed myself in writing. I also taught myself Adobe's entire suite of tools, diving deep into editing and music curation.
+        I graduated in 2016 from the University of Texas at Austin with a B.S. in Radio-Television-Film and a certificate in creative writing. My love for storytelling led me to write several novels and screenplays, even winning an award with Austin's chapter of SCBWI. After undergrad, I moved to Los Angeles to pursue an MFA in Writing and Producing for Television from Loyola Marymount University. There, I honed my skills in film and television development, produced a short film, and immersed myself in writing. I also taught myself Adobe's entire suite of tools, diving deep into editing and music curation.
         </Typography>
 
         <Typography variant="h3" component="h3" sx={{ marginBottom: '10px', color: '#415170' }}>
