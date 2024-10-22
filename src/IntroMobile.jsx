@@ -43,17 +43,6 @@ function IntroMobile() {
                 </Typography>
             </div>
 
-            <img 
-                src={BluePic} 
-                alt="Blue Picture" 
-                style={{ 
-                    width: '100%', 
-                    height: 'auto', 
-                    marginBottom: '20px', 
-                    marginTop: '20px'
-                }} 
-            />
-            
             <div style={{ width: '100%', textAlign: 'center'}}>
                 <Typography 
                     variant="body2" 
@@ -67,6 +56,19 @@ function IntroMobile() {
                     Select Portfolio or Resume to jump right in OR scroll on down to take the scenic route through my intrepid journey to software engineering.
                 </Typography>
             </div>
+
+            <img 
+                src={BluePic} 
+                alt="Blue Picture" 
+                style={{ 
+                    width: '100%', 
+                    height: 'auto', 
+                    marginBottom: '20px', 
+                    marginTop: '20px'
+                }} 
+            />
+            
+
 
 
         </div>
