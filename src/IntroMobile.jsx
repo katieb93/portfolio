@@ -43,7 +43,8 @@ function IntroMobile() {
                 </Typography>
             </div>
 
-            <div style={{ width: '100%', textAlign: 'center'}}>
+            {/* <div style={{ width: '100%', textAlign: 'center'}}> */}
+            <div style={{ width: '80%', textAlign: 'center', marginTop: '1.5rem' }}>
                 <Typography 
                     variant="body2" 
                     sx={{ 
